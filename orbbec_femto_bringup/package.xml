@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>orbbec_femto_bringup</name>
+    <version>0.1.0</version>
+    <description>
+        Launch files for Orbbec Femto Bolt cameras
+    </description>
+    <maintainer email="fabio.amadio@inria.fr">Fabio Amadio</maintainer>
+    <license>BSD 3-Clause</license>
+
+    <buildtool_depend>catkin</buildtool_depend>	
+</package>
+

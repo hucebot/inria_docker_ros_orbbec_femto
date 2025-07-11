@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find orbbec_camera)/launch/femto_bolt.launch">
+        <!-- unique camera name-->
+        <arg name="camera_name" default="camera"/>
+        <!-- Hardware depth registration -->
+        <arg name="depth_registration" default="true"/>
+        <!-- Set the serial number in case of multiple cameras -->
+        <arg name="serial_number" default=""/>
+        <arg name="enable_colored_point_cloud" default="true"/>
+        <arg name="color_width" default="1280"/>
+        <arg name="color_height" default="720"/>
+        <arg name="depth_width" default="640"/>
+        <arg name="depth_height" default="576"/>
+        <arg name="ir_width" default="640"/>
+        <arg name="ir_height" default="576"/>
+        <arg name="device_num" default="2"/>
+        <arg name="sync_mode" default="free_run"/>
+        <arg name="ordered_pc" default="true"/>
+    </include>
+    
+     <!-- Publish the static transform for camera extrinsic calibration -->
+     <node pkg="tf2_ros" type="static_transform_publisher" name="orbbec_tf_publisher" args="0.0 0.0 0.0 0.0 0.0 0.0 base_link camera_link" />
+</launch>
