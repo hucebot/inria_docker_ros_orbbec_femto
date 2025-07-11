@@ -4,10 +4,10 @@ Docker container for running Orbbec Femto Bolt cameras in ROS Noetic
 
 ## Usage
 
-- Build: `bash build.sh'
-- Run the container: 'bash launch.sh'
+- Build: `bash build_docker.sh`
+- Run the container: `bash run_docker.sh`
 - Compile inside the container `catkin build && source devel/setup.bash`
-- Launch cameras, e.g.: `roslaunch orbbec_femto_bringup launch_femto_bolt.launch`
+- Launch cameras, e.g.: `roslaunch orbbec_femto_bringup my_orbbec_femto_bolt.launch`
 
 ## Notes
 
